@@ -83,19 +83,19 @@ function livelyAudioListener(audioArray)
 
   // document.getElementsByClassName("song-title")[0].innerHTML = maxVolume;
 
-  if (maxVolume < 0.02)
-  {
-    document.getElementsByClassName("active-icon")[0].src = "./img/inactive.png";
-    document.getElementsByClassName("active-icon")[0].style.animation = "none";
-    document.getElementsByClassName("active-icon")[0].style.marginTop = "2.5px";
-    document.getElementsByClassName("active-icon")[0].style.marginBottom = "-2.5px";
-  }
-  else {
-    document.getElementsByClassName("active-icon")[0].src = "./img/active.png";
-    document.getElementsByClassName("active-icon")[0].style.animation = "bouncingActiveIndicator 1s infinite";
-    document.getElementsByClassName("active-icon")[0].style.marginTop = "10px";
-    document.getElementsByClassName("active-icon")[0].style.marginBottom = "-10px";
-  }
+  // if (maxVolume < 0.02)
+  // {
+  //   document.getElementsByClassName("active-icon")[0].src = "./img/inactive.png";
+  //   document.getElementsByClassName("active-icon")[0].style.animation = "none";
+  //   document.getElementsByClassName("active-icon")[0].style.marginTop = "2.5px";
+  //   document.getElementsByClassName("active-icon")[0].style.marginBottom = "-2.5px";
+  // }
+  // else {
+  document.getElementsByClassName("active-icon")[0].src = "./img/active.png";
+  document.getElementsByClassName("active-icon")[0].style.animation = "bouncingActiveIndicator 1s infinite";
+  document.getElementsByClassName("active-icon")[0].style.marginTop = "10px";
+  document.getElementsByClassName("active-icon")[0].style.marginBottom = "-10px";
+  // }
 }
 
 // function livelyWallpaperPlaybackChanged(data)
