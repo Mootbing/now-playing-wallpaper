@@ -11,11 +11,16 @@
 //   "TrackNumber": 0
 // }
 
+let playing = false;
+
 function livelyCurrentTrack(data) {
   let obj = JSON.parse(data);
   //when no track is playing its null
+
   if (obj != null)
   {
+    playing = true
+
     document.getElementsByClassName("media-controls")[0].style.display = "none";
 
     document.getElementsByClassName("player-box")[0].style.width = "300px";
@@ -33,14 +38,11 @@ function livelyCurrentTrack(data) {
 
     //set the thumbnail
     document.getElementsByClassName("thumbnail")[0].src = "data:image/png;base64," + obj.Thumbnail;
-
-    if (obj.Thumbnail != null)
-    {
-        //base64 string
-        console.log(obj.Thumbnail);
-    }
   }
   else {
+
+    playing = false
+
     document.getElementsByClassName("song-title")[0].innerHTML = "Not playing";
     document.getElementsByClassName("song-title")[0].style.marginTop = "0px";
     document.getElementsByClassName("song-title")[0].style.color = "#888";
@@ -62,6 +64,12 @@ function livelyCurrentTrack(data) {
 
 function livelyAudioListener(audioArray) 
 {
+
+  if (!playing)
+  {
+    return;
+  }
+
   let maxVolume = 0;
 
   for (const volume of audioArray) {
