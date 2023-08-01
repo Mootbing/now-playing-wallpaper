@@ -136,6 +136,13 @@
 .active-icon {
   width: 81px;
   height: 17px;
+
+  animation: bouncingActiveIndicator 1s infinite;
+
+  margin-top: 10px;
+  margin-bottom: -10px;
+
+  /* transition: all 0.5s ease; */
 }
 
 .content-container {
@@ -161,6 +168,7 @@
   margin-top: 5px;
 
   text-transform: uppercase;
+  word-break: break-all;
 }
 
 .artist-name {
@@ -175,12 +183,13 @@
   margin-top: -15px;
 
   text-transform: uppercase;
+  word-break: break-all;
 }
 
 .media-controls {
   width: 100%;
 
-  display: flex;
+  display: none;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -194,4 +203,20 @@
 .thumbnail {
   width: 83px;
   height: 83px;
+
+  border-radius: 10px;
+
+  object-fit: cover;
+}
+
+@keyframes bouncingActiveIndicator {
+  0% {
+    transform: scaleY(0%) translateY(-50%);
+  }
+  50% {
+    transform: scaleY(100%) translateY(-50%);
+  }
+  100% {
+    transform: scaleY(0%) translateY(-50%);
+  }
 }
