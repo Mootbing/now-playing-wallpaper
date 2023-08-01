@@ -74,3 +74,120 @@
 
   background-color: black;
 }
+
+/* my code */
+
+.player-box {
+
+  position: absolute;
+
+  width: 300px;
+  height: 120px;
+
+  bottom: 25px;
+  left: 25px;
+
+  border-radius: 15px;
+  background: linear-gradient(143deg, rgba(255, 255, 255, 0.05) 0%, rgba(4, 4, 4, 0.05) 100%);
+  backdrop-filter: blur(2px);
+}
+
+.auto-align-flex {
+  padding: 15px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider-container {
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+
+  /* background-color: red; */
+
+  width: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider-bar {
+  width: 4px;
+  height: 83px;
+}
+
+.slider-knob {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 20px;
+  height: 20px;
+
+  border-radius: 50%;
+  /* background-color: white; */
+}
+
+.active-icon {
+  width: 81px;
+  height: 17px;
+}
+
+.content-container {
+  width: 125px;
+
+  /* background-color: red; */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+
+.song-title {
+  color: #FFF;
+  font-family: Lexend;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+
+  margin-top: 5px;
+}
+
+.artist-name {
+  color: #888;
+  /* font-family: Lexend; */
+  font-size: 8px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: 2px;
+
+  margin-top: -15px;
+}
+
+.media-controls {
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.media-icon {
+  width: 22px;
+  height: 22px;
+}
+
+.thumbnail {
+  width: 83px;
+  height: 83px;
+}
