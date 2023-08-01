@@ -18,10 +18,18 @@ function livelyCurrentTrack(data) {
   {
     document.getElementsByClassName("media-controls")[0].style.display = "none";
 
+    document.getElementsByClassName("player-box")[0].style.width = "300px";
+    document.getElementsByClassName("player-box")[0].style.height = "120px";
+
     //set the title and artist
     document.getElementsByClassName("song-title")[0].innerHTML = obj.Title.length > 20 ? obj.Title.substring(0, 20) + "..." : obj.Title;
     document.getElementsByClassName("artist-name")[0].style.display = "block";
+    document.getElementsByClassName("song-title")[0].style.marginTop = "5px";
+    document.getElementsByClassName("song-title")[0].style.color = "#fff";
+    document.getElementsByClassName("slider-container")[0].style.display = "flex";
+    document.getElementsByClassName("thumbnail")[0].style.display = "block";
     document.getElementsByClassName("artist-name")[0].innerHTML = obj.Artist.length > 14 ? obj.Artist.substring(0, 14) + "..." : obj.Artist;
+    document.getElementsByClassName("active-icon")[0].style.display = "block";
 
     //set the thumbnail
     document.getElementsByClassName("thumbnail")[0].src = "data:image/png;base64," + obj.Thumbnail;
@@ -34,11 +42,21 @@ function livelyCurrentTrack(data) {
   }
   else {
     document.getElementsByClassName("song-title")[0].innerHTML = "Not playing";
+    document.getElementsByClassName("song-title")[0].style.marginTop = "0px";
+    document.getElementsByClassName("song-title")[0].style.color = "#888";
+
     document.getElementsByClassName("artist-name")[0].style.display = "none";
+    document.getElementsByClassName("slider-container")[0].style.display = "none";
+    document.getElementsByClassName("thumbnail")[0].style.display = "none";
     document.getElementsByClassName("media-controls")[0].style.display = "none";
     // set active icon image src to the inactive.png
 
     document.getElementsByClassName("thumbnail")[0].src = "./img/noImage.png";
+
+    document.getElementsByClassName("player-box")[0].style.width = "150px";
+    document.getElementsByClassName("player-box")[0].style.height = "50px";
+
+    document.getElementsByClassName("active-icon")[0].style.display = "none";
   }
 }
 
@@ -53,7 +71,7 @@ function livelyAudioListener(audioArray)
     }
   }
 
-  document.getElementsByClassName("slider-knob")[0].style.marginTop = (83 - (maxVolume * 83)) - 22 + "px";
+  document.getElementsByClassName("slider-knob")[0].style.marginTop = Math.max(0, (83 - (maxVolume * 83)) - 22) + "px";
 
   // document.getElementsByClassName("song-title")[0].innerHTML = maxVolume;
 
