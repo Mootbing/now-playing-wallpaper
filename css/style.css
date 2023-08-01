@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* @font-face
+{
+    font-family: 'Roboto Mono';
+    font-weight: 100;
+    font-style: normal;
+    src: url('fonts/Roboto/Roboto-Regular.ttf');
+} */
+
+.p-summary {
+  position: absolute;
+  top: 25%;
+  left: 37.3%;
+  z-index: 2;
+  font-weight: 400;
+  text-align: center;
+  color: #ffffff;
+}
+.p-summary #clock {
+  font-family: "Lexend";
+  
+  font-weight: 100;
+  
+  font-size: 3em;
+}
+.p-summary #day {
+  font-family: "Lexend";
+  
+  font-weight: 100;
+
+  font-size: 5em;
+  line-height: .3em;
+  /* transform: rotate(-4deg); */
+  height: .4em;
+  opacity: .7;
+
+  margin-top: 25px;
+}
+.p-summary #date {
+  font-family: "Lexend";
+
+  font-weight: 100;
+
+  font-size: 3em;
+
+  margin-top: 25px;
+}
+
+.p-canvas-webgl {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+
+  /* background-color: black; */
+
+  opacity: 100%;
+
+  /* display: none; */
+}
+
+.background-black {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+
+  opacity: 90%;
+
+  background-color: black;
+}
